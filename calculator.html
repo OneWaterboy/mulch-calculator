@@ -2,16 +2,29 @@
 <html>
 <head>
     <title>Soil Calculator</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="calculator-styles.css">
 </head>
 <body>
     <h1>Soil Calculator</h1>
     <div class="container">
-        <label for="length">Length:</label>
-        <input type="number" id="length" placeholder="Length">
+        <label for="shape">Shape:</label>
+        <select id="shape" onchange="changeShape()">
+            <option value="square">Square</option>
+            <option value="circular">Circular</option>
+        </select>
 
-        <label for="width">Width:</label>
-        <input type="number" id="width" placeholder="Width">
+        <div id="squareInputs">
+            <label for="length">Length:</label>
+            <input type="number" id="length" placeholder="Length">
+
+            <label for="width">Width:</label>
+            <input type="number" id="width" placeholder="Width">
+        </div>
+
+        <div id="circularInputs" style="display: none;">
+            <label for="radius">Radius:</label>
+            <input type="number" id="radius" placeholder="Radius">
+        </div>
 
         <label for="height">Height:</label>
         <input type="number" id="height" placeholder="Height">
@@ -30,6 +43,6 @@
         <p id="result"></p>
     </div>
 
-    <script src="script.js"></script>
+    <script src="calculatorScripts.js"></script>
 </body>
 </html>
