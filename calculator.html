@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soil Calculator</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Soil Calculator</h1>
+    <div class="container">
+        <label for="length">Length:</label>
+        <input type="number" id="length" placeholder="Length">
+
+        <label for="width">Width:</label>
+        <input type="number" id="width" placeholder="Width">
+
+        <label for="height">Height:</label>
+        <input type="number" id="height" placeholder="Height">
+
+        <label for="capacity">Bag Capacity:</label>
+        <input type="number" id="capacity" placeholder="Bag Capacity">
+
+        <label for="unit">Unit Type:</label>
+        <select id="unit">
+            <option value="cubic_feet">Cubic Feet</option>
+            <option value="cubic_meters">Cubic Meters</option>
+        </select>
+
+        <button onclick="calculate()">Calculate</button>
+
+        <p id="result"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
